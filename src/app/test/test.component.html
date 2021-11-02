@@ -1,1 +1,398 @@
-<p>test works!</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Introvert/ Extrovert</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
+        <div class="container"><a class="navbar-brand" href="#">Home</a><button class="navbar-toggler"
+                data-toggle="collapse" data-target="#navbarResponsive"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#"></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead text-center text-white">
+        <div class="masthead-content">
+            <div class="container">
+                <h1 class="masthead-heading mb-0">Answer the questions</h1>
+                <h3 class="masthead-subheading mb-0">below</h3>
+            </div>
+        </div>
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+    </header>
+    <form [formGroup]="questionsForm">
+        <section>
+            <div class="container">
+                <div>
+                    <h1 class="text-center display-5" style="padding: 10px;padding-top: 5%;">I have trouble finding
+                        people I
+                        want to be friends with.<br></h1>
+                    <fieldset style="padding: 10px;padding-bottom: 5%;">
+                        <div formGroupName=question1Form>
+                            <div class="d-flex flex-row" style="padding-left: 10%;">
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question1radio1" value="1"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question1radio1">Disagree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question1radio2" value="2"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question1radio2">Slightly
+                                            disagree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question1radio3" value="3"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question1radio3">Neutral</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question1radio4" value="4"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question1radio4">Slightly agree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question1radio5" value="5"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question1radio5">Agree</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div>
+                    <h1 class="text-center display-5" style="padding: 10px;">I mostly listen to people in
+                        conversations.<br>
+                    </h1>
+                    <fieldset style="padding: 10px;padding-bottom: 5%;">
+                        <div formGroupName=question2Form>
+                            <div class="d-flex flex-row" style="padding-left: 10%;">
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question2radio1" value="1"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question2radio1">Disagree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question2radio2" value="2"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question2radio2">Slightly
+                                            disagree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question2radio3" value="3"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question2radio3">Neutral</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question2radio4" value="4"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question2radio4">Slightly agree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question2radio5" value="5"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question2radio5">Agree</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div>
+                    <h1 class="text-center display-5" style="padding: 10px;">I am quit around strangers.<br></h1>
+                    <fieldset style="padding: 10px;padding-bottom: 5%;">
+                        <div formGroupName=question3Form>
+                            <div class="d-flex flex-row" style="padding-left: 10%;">
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question3radio1" value="1"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question3radio1">Disagree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question3radio2" value="2"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question3radio2">Slightly
+                                            disagree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question3radio3" value="3"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question3radio3">Neutral</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question3radio4" value="4"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question3radio4">Slightly agree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question3radio5" value="5"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question3radio5">Agree</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div>
+                    <h1 class="text-center display-5" style="padding: 10px;">I don't talk a lot.</h1>
+                    <fieldset style="padding: 10px;padding-bottom: 5%;">
+                        <div formGroupName=question4Form>
+                            <div class="d-flex flex-row" style="padding-left: 10%;">
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question4radio1" value="1"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question4radio1">Disagree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question4radio2" value="2"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question4radio2">Slightly
+                                            disagree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question4radio3" value="3"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question4radio3">Neutral</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question4radio4" value="4"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question4radio4">Slightly agree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question4radio5" value="5"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question4radio5">Agree</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div>
+                    <h1 class="text-center display-5" style="padding: 10px;">I keep in the background.</h1>
+                    <fieldset style="padding: 10px;padding-bottom: 5%;">
+                        <div formGroupName=question5Form>
+                            <div class="d-flex flex-row" style="padding-left: 10%;">
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question5radio1" value="1"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question5radio1">Disagree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question5radio2" value="2"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question5radio2">Slightly
+                                            disagree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question5radio3" value="3"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question5radio3">Neutral</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question5radio4" value="4"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question5radio4">Slightly agree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question5radio5" value="5"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question5radio5">Agree</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div>
+                    <h1 class="text-center display-5" style="padding: 10px;">I talk to a lot of different people at
+                        parties.<br></h1>
+                    <fieldset style="padding: 10px;padding-bottom: 5%;">
+                        <div formGroupName=question6Form>
+                            <div class="d-flex flex-row" style="padding-left: 10%;">
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question6radio1" value="1"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question6radio1">Disagree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question6radio2" value="2"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question6radio2">Slightly
+                                            disagree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question6radio3" value="3"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question6radio3">Neutral</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question6radio4" value="4"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question6radio4">Slightly agree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question6radio5" value="5"
+                                            class="custom-control-input">
+                                        <span class="custom-control-label" for="question6radio5">Agree</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div>
+                    <h1 class="text-center display-5" style="padding: 10px;">I love large parties.</h1>
+                    <fieldset style="padding: 10px;padding-bottom: 5%;">
+                        <div formGroupName=question7Form>
+                            <div class="d-flex flex-row" style="padding-left: 10%;">
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question7radio1" value="1" class="custom-control-input">
+                                        <span  class="custom-control-label" for="question7radio1">Disagree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question7radio2" value="2" class="custom-control-input">
+                                        <span  class="custom-control-label" for="question7radio2">Slightly disagree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question7radio3" value="3" class="custom-control-input">
+                                        <span  class="custom-control-label" for="question7radio3">Neutral</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question7radio4" value="4" class="custom-control-input">
+                                        <span  class="custom-control-label" for="question7radio4">Slightly agree</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline test">
+                                    <label>
+                                        <input formControlName="answer" type="radio" id="question7radio5" value="5" class="custom-control-input">
+                                        <span  class="custom-control-label" for="question7radio5">Agree</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+    </form>
+    <section>
+        <div class="container" id="results" style="padding-bottom: 5%;">
+            <a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" (click)="onClick()">Show results</a>
+        </div>
+    </section>
+    <footer class="py-5 bg-black">
+        <div class="container">
+            <p class="text-center text-white m-0 small">Copyright&nbsp;© Introvert/ Extrovert 2018</p>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
