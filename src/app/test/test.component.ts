@@ -13,6 +13,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class TestComponent implements OnInit {
 
   questionsForm!: FormGroup;
+  isLoading = false;
 
   constructor(private http: HttpClient, private router: Router,) { }
 
@@ -52,14 +53,14 @@ export class TestComponent implements OnInit {
       }
 
       const json = "{\"key\": [" + answers.toString() + "]}"
-      var base64 = btoa(json);
-
-      this.http.get<any>('https://hcaid-backend.herokuapp.com/?key=' + base64).subscribe(value => {
+      var answersBase64 = btoa(json);
+      this.isLoading = true;
+      this.http.get<any>('https://hcaid-backend.herokuapp.com/?key=' + answersBase64).subscribe(value => {
 
         const json = "{\"key\": [" + value[0].toString() + "," + value[1].toString() + "]}"
-        var base64 = btoa(json);
+        var resultsBase64 = btoa(json);
 
-        this.router.navigate(['/result'], { queryParams: { result: base64 } });
+        this.router.navigate(['/result'], { queryParams: { result: resultsBase64, answers: answersBase64 } });
       });
     }
   }

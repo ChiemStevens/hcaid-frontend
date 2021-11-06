@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-landing',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) {
+    this.http.get<any>('https://hcaid-backend.herokuapp.com/');
+  }
 
   ngOnInit(): void {
+    
   }
 
 }

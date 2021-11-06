@@ -27,7 +27,7 @@
             <div class="container">
                 <h1 class="masthead-heading mb-0">You are an:</h1>
                 <h2 class="masthead-subheading mb-0" style="padding-bottom: 5%;">{{type}}</h2>
-                <h2 class="masthead-subheading">We are {{accuracy | number:'1.1-1'}}% sure</h2>
+                <h2 *ngIf="!notSure" class="masthead-subheading">We are {{accuracy | number:'1.1-1'}}% sure</h2>
             </div>
         </div>
         <div class="bg-circle-1 bg-circle"></div>
@@ -40,8 +40,44 @@
             <div class="row align-items-center">
                 <div class="col">
                     <div class="p-5">
-                        <h2 class="display-4">How is the result calculated?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                        <h2 *ngIf="notSure" class="display-4">What happened?</h2>
+                        <h2 *ngIf="!notSure" class="display-4">How is the result calculated?</h2>
+                        <p *ngIf="notSure">To give an accurate result about the answered statements an AI is used. This AI is trained with the answers of about 7000+ people. Based on the answers you have given the AI cant tell what type of person you are. This can be because {{ reason }}</p>
+                        <p *ngIf="!notSure">To give an accurate result about the answered statements an AI is used. This AI is trained with the answers of about 7000+ people. Based on the answers you have given the AI is {{accuracy | number:'1.1-1'}}% sure you are a {{ type }}. This can be because {{ reason }}. You can read more about the different types of {{type}}s down below.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="p-5">
+                        <div *ngIf="!notSure" >
+                            <h2 class="display-4">Different types of {{type}}s</h2>
+                                <p>Based on the answers you have given we have establised that you can be linked to the following types of {{type}}s: </p>
+                                <div *ngFor="let type of types">
+                                    <p>- {{type}}</p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="p-5">
+                        <div *ngIf="!notSure">
+                            <h2 class="display-4">Tips for you!</h2>
+                            <p>Here are some tips for you to gain more confidence when talking to people.</p>
+                            <div *ngFor="let tip of tips">
+                                <p>- {{tip}}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,20 +98,22 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-xl-4 order-lg-2">
-                    <div class="p-5"><img class="img-fluid" src="/assets/img/intro%201.jpg"></div>
+                    <div *ngIf="isIntro" class="p-5"><img class="img-fluid" src="/assets/img/intro%201.jpg"></div>
+                    <div *ngIf="!isIntro" class="p-5"><img class="img-fluid" src="/assets/img/Extro%201.png"></div>
                 </div>
                 <div class="col-lg-6 col-xl-4 order-lg-2">
                     <div class="p-5"><img class="img-fluid" src="/assets/img/intro%202.jpg"></div>
                 </div>
                 <div class="col-lg-6 col-xl-4 order-lg-2">
-                    <div class="p-5"><img class="img-fluid" src="/assets/img/intro%203.jpg"></div>
+                    <div *ngIf="isIntro" class="p-5"><img class="img-fluid" src="/assets/img/intro%203.jpg"></div>
+                    <div *ngIf="!isIntro" class="p-5"><img class="img-fluid" src="/assets/img/Extro%202.jpg"></div>
                 </div>
             </div>
         </div>
     </section>
     <footer class="py-5 bg-black">
         <div class="container">
-            <p class="text-center text-white m-0 small"></p>
+            <p class="text-center text-white m-0 small">Created by Chiem Stevens, design by Bootstrap studio</p>
         </div>
     </footer>
     <script src="assets/js/jquery.min.js"></script>
